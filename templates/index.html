@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Good website</title>
-    <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
 </head>
 <body>
     <div class="container">
-    <h1 class="topic">Good carrer</h1>
-    <img class="photo" src="../static/images/banner.jpg" >
-    <h2 class="topic">about carrer</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quasi est id quaerat voluptas atque sapiente, dolor recusandae autem maiores, quod cumque obcaecati laudantium, alias dolorem explicabo earum omnis consequuntur!</p>
-    <h2 class="topic">open position</h2>
-    <div class="topic">
-    <button>Contact us </button>
+    <h1 class="text-center mt-2 mb-4">Good carrer</h1>
+    <img class="img-fluid" src="../static/images/banner.jpg" >
+    <h2 class="text-center mt-2 mb-4">about career</h2>
+    <div>
+        {% for job in jobs %}
+        {% include 'job.html'%}
+        {% endfor %}
+       
     </div>
-    <p class="topic"> copy right 2024 </p>
+    <h2 class="topic">open position</h2>
+    <div class="text-center">
+    <button class="btn btn-primary btn-lg">Contact us </button>
+    </div>
+    <p class="text-center mt-4"> copy right 2024 </p>
 </body>
 </html>
